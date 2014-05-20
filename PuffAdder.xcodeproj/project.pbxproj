@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301E5923192BE44C004C1866 /* TNCCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E5922192BE44C004C1866 /* TNCCalculatorTests.m */; };
+		301E5926192BE598004C1866 /* TNCCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E5925192BE598004C1866 /* TNCCalculator.m */; };
 		3084ADE2192BE21F008DD510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE1192BE21F008DD510 /* Foundation.framework */; };
 		3084ADE4192BE21F008DD510 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE3192BE21F008DD510 /* CoreGraphics.framework */; };
 		3084ADE6192BE21F008DD510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE5192BE21F008DD510 /* UIKit.framework */; };
@@ -32,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		301E5922192BE44C004C1866 /* TNCCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCCalculatorTests.m; sourceTree = "<group>"; };
+		301E5924192BE598004C1866 /* TNCCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCCalculator.h; sourceTree = "<group>"; };
+		301E5925192BE598004C1866 /* TNCCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCCalculator.m; sourceTree = "<group>"; };
 		3084ADDE192BE21F008DD510 /* PuffAdder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuffAdder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3084ADE1192BE21F008DD510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3084ADE3192BE21F008DD510 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +117,9 @@
 				3084ADF3192BE21F008DD510 /* Main.storyboard */,
 				3084ADF6192BE21F008DD510 /* TNCViewController.h */,
 				3084ADF7192BE21F008DD510 /* TNCViewController.m */,
+				301E5924192BE598004C1866 /* TNCCalculator.h */,
+				301E5925192BE598004C1866 /* TNCCalculator.m */,
+				301E5922192BE44C004C1866 /* TNCCalculatorTests.m */,
 				3084ADF9192BE21F008DD510 /* Images.xcassets */,
 				3084ADE8192BE21F008DD510 /* Supporting Files */,
 			);
@@ -228,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3084ADF8192BE21F008DD510 /* TNCViewController.m in Sources */,
+				301E5926192BE598004C1866 /* TNCCalculator.m in Sources */,
 				3084ADF2192BE21F008DD510 /* TNCAppDelegate.m in Sources */,
 				3084ADEE192BE21F008DD510 /* main.m in Sources */,
 			);
@@ -237,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301E5923192BE44C004C1866 /* TNCCalculatorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
