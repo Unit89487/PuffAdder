@@ -14,6 +14,6 @@
 @property (nonatomic, readonly) double average;
 @property (nonatomic, readonly) double count;
 
-- (void)processNumber:(double)number;
+- (void)updateWithNumber:(double)number;
 
 @end
