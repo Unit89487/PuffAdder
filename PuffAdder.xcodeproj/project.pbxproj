@@ -19,8 +19,6 @@
 		3084AE01192BE21F008DD510 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084AE00192BE21F008DD510 /* XCTest.framework */; };
 		3084AE02192BE21F008DD510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE1192BE21F008DD510 /* Foundation.framework */; };
 		3084AE03192BE21F008DD510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE5192BE21F008DD510 /* UIKit.framework */; };
-		3084AE0B192BE21F008DD510 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3084AE09192BE21F008DD510 /* InfoPlist.strings */; };
-		3084AE0D192BE21F008DD510 /* PuffAdderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3084AE0C192BE21F008DD510 /* PuffAdderTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +48,7 @@
 		3084ADF9192BE21F008DD510 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3084ADFF192BE21F008DD510 /* PuffAdderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuffAdderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3084AE00192BE21F008DD510 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3084AE08192BE21F008DD510 /* PuffAdderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PuffAdderTests-Info.plist"; sourceTree = "<group>"; };
-		3084AE0A192BE21F008DD510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3084AE0C192BE21F008DD510 /* PuffAdderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuffAdderTests.m; sourceTree = "<group>"; };
+		3084AE08192BE21F008DD510 /* PuffAdderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PuffAdderTests-Info.plist"; path = "PuffAdderTests/PuffAdderTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				3084ADE7192BE21F008DD510 /* PuffAdder */,
-				3084AE06192BE21F008DD510 /* PuffAdderTests */,
 				3084ADE0192BE21F008DD510 /* Frameworks */,
 				3084ADDF192BE21F008DD510 /* Products */,
 			);
@@ -127,27 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				3084ADE9192BE21F008DD510 /* PuffAdder-Info.plist */,
+				3084AE08192BE21F008DD510 /* PuffAdderTests-Info.plist */,
 				3084ADEA192BE21F008DD510 /* InfoPlist.strings */,
 				3084ADED192BE21F008DD510 /* main.m */,
 				3084ADEF192BE21F008DD510 /* PuffAdder-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3084AE06192BE21F008DD510 /* PuffAdderTests */ = {
-			isa = PBXGroup;
-			children = (
-				3084AE0C192BE21F008DD510 /* PuffAdderTests.m */,
-				3084AE07192BE21F008DD510 /* Supporting Files */,
-			);
-			path = PuffAdderTests;
-			sourceTree = "<group>";
-		};
-		3084AE07192BE21F008DD510 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3084AE08192BE21F008DD510 /* PuffAdderTests-Info.plist */,
-				3084AE09192BE21F008DD510 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -239,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3084AE0B192BE21F008DD510 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3084AE0D192BE21F008DD510 /* PuffAdderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,14 +265,6 @@
 				3084ADF4192BE21F008DD510 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3084AE09192BE21F008DD510 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3084AE0A192BE21F008DD510 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -457,6 +425,7 @@
 				3084AE12192BE21F008DD510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3084AE13192BE21F008DD510 /* Build configuration list for PBXNativeTarget "PuffAdderTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +434,7 @@
 				3084AE15192BE21F008DD510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
