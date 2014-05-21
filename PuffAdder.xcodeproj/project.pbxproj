@@ -59,10 +59,10 @@
 		3084ADEB192BE21F008DD510 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3084ADED192BE21F008DD510 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3084ADEF192BE21F008DD510 /* PuffAdder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PuffAdder-Prefix.pch"; sourceTree = "<group>"; };
-		3084ADF0192BE21F008DD510 /* TNCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCAppDelegate.h; sourceTree = "<group>"; };
-		3084ADF1192BE21F008DD510 /* TNCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCAppDelegate.m; sourceTree = "<group>"; };
+		3084ADF0192BE21F008DD510 /* TNCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TNCAppDelegate.h; path = PuffAdder/TNCAppDelegate.h; sourceTree = "<group>"; };
+		3084ADF1192BE21F008DD510 /* TNCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TNCAppDelegate.m; path = PuffAdder/TNCAppDelegate.m; sourceTree = "<group>"; };
 		3084ADF4192BE21F008DD510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3084ADF9192BE21F008DD510 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3084ADF9192BE21F008DD510 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PuffAdder/Images.xcassets; sourceTree = "<group>"; };
 		3084ADFF192BE21F008DD510 /* PuffAdderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuffAdderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3084AE00192BE21F008DD510 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3084AE08192BE21F008DD510 /* PuffAdderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PuffAdderTests-Info.plist"; path = "PuffAdderTests/PuffAdderTests-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -96,7 +96,13 @@
 		3084ADD5192BE21F008DD510 = {
 			isa = PBXGroup;
 			children = (
-				3084ADE7192BE21F008DD510 /* PuffAdder */,
+				3084ADF0192BE21F008DD510 /* TNCAppDelegate.h */,
+				3084ADF1192BE21F008DD510 /* TNCAppDelegate.m */,
+				3084ADF3192BE21F008DD510 /* Main.storyboard */,
+				30DC935F192D11410003BEC5 /* Calculator View Controller */,
+				30DC9360192D11800003BEC5 /* Calculator */,
+				3084ADF9192BE21F008DD510 /* Images.xcassets */,
+				3084ADE8192BE21F008DD510 /* Supporting Files */,
 				3084ADE0192BE21F008DD510 /* Frameworks */,
 				3084ADDF192BE21F008DD510 /* Products */,
 			);
@@ -122,30 +128,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3084ADE7192BE21F008DD510 /* PuffAdder */ = {
-			isa = PBXGroup;
-			children = (
-				3084ADF0192BE21F008DD510 /* TNCAppDelegate.h */,
-				3084ADF1192BE21F008DD510 /* TNCAppDelegate.m */,
-				3084ADF3192BE21F008DD510 /* Main.storyboard */,
-				30527EA0192CD8CC0021064D /* TNCCalculatorViewController.h */,
-				30527EA1192CD8CC0021064D /* TNCCalculatorViewController.m */,
-				30527EB0192CF7570021064D /* TNCCalculatorViewControllerTests.h */,
-				30527E9E192CD73B0021064D /* TNCCalculatorViewControllerTests.m */,
-				30527EAE192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m */,
-				30DC935D192D10AF0003BEC5 /* TNCCalculatorViewControllerTests+InputField.m */,
-				30527EA8192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m */,
-				30527EA4192CF6270021064D /* TNCCalculatorViewControllerTests+AverageCell.m */,
-				30527EAB192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m */,
-				301E5924192BE598004C1866 /* TNCCalculator.h */,
-				301E5925192BE598004C1866 /* TNCCalculator.m */,
-				301E5922192BE44C004C1866 /* TNCCalculatorTests.m */,
-				3084ADF9192BE21F008DD510 /* Images.xcassets */,
-				3084ADE8192BE21F008DD510 /* Supporting Files */,
-			);
-			path = PuffAdder;
-			sourceTree = "<group>";
-		};
 		3084ADE8192BE21F008DD510 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +138,35 @@
 				3084ADEF192BE21F008DD510 /* PuffAdder-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = PuffAdder;
+			sourceTree = "<group>";
+		};
+		30DC935F192D11410003BEC5 /* Calculator View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				30527EA0192CD8CC0021064D /* TNCCalculatorViewController.h */,
+				30527EA1192CD8CC0021064D /* TNCCalculatorViewController.m */,
+				30527EB0192CF7570021064D /* TNCCalculatorViewControllerTests.h */,
+				30527E9E192CD73B0021064D /* TNCCalculatorViewControllerTests.m */,
+				30527EAE192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m */,
+				30DC935D192D10AF0003BEC5 /* TNCCalculatorViewControllerTests+InputField.m */,
+				30527EA8192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m */,
+				30527EA4192CF6270021064D /* TNCCalculatorViewControllerTests+AverageCell.m */,
+				30527EAB192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m */,
+			);
+			name = "Calculator View Controller";
+			path = PuffAdder;
+			sourceTree = "<group>";
+		};
+		30DC9360192D11800003BEC5 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				301E5924192BE598004C1866 /* TNCCalculator.h */,
+				301E5925192BE598004C1866 /* TNCCalculator.m */,
+				301E5922192BE44C004C1866 /* TNCCalculatorTests.m */,
+			);
+			name = Calculator;
+			path = PuffAdder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				3084ADF4192BE21F008DD510 /* Base */,
 			);
 			name = Main.storyboard;
+			path = PuffAdder;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
