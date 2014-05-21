@@ -26,28 +26,19 @@
 }
 
 - (void)testInputFieldHeight {
-    XCTAssertEqual(CGRectGetHeight(self.calculatorViewController.inputField.frame),
-                   [self.calculatorViewController.inputField intrinsicContentSize].height);
+    CGFloat expectedHeight = 0;
+    expectedHeight += [self.calculatorViewController.inputField intrinsicContentSize].height;
+    expectedHeight += CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
+    XCTAssertEqual(CGRectGetHeight(self.calculatorViewController.inputField.frame), expectedHeight);
 }
 
 - (void)testInputFieldKeyboardType {
     XCTAssertEqual(self.calculatorViewController.inputField.keyboardType, UIKeyboardTypeDecimalPad);
 }
 
-//- (void)testInputField
-
-
-/*
- 
- viewController.view
- 
- 
- tableViewController.view = tableViewController.tableView
- 
- 
- 
- 
- 
- */
+- (void)testInputFieldContentVerticalAlignment {
+    XCTAssertEqual(self.calculatorViewController.inputField.contentVerticalAlignment,
+                   UIControlContentVerticalAlignmentBottom);
+}
 
 @end
