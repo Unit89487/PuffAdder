@@ -41,4 +41,10 @@
                    UIControlContentVerticalAlignmentBottom);
 }
 
+- (void)testInputFieldTextAlingment {
+    XCTAssertEqual(self.calculatorViewController.inputField.textAlignment, NSTextAlignmentRight);
+}
+
+// TODO: Text Field should become first responder when viewDidAppear 
+
 @end
