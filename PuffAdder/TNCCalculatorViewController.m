@@ -13,6 +13,7 @@ NSString * const TNCCalcuatorViewControllerStoryboardIdentifier = @"CalculatorVi
 
 @interface TNCCalculatorViewController ()
 
+@property (nonatomic, readwrite) IBOutlet UITextField *inputField;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *totalCell;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *averageCell;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *countCell;

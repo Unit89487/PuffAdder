@@ -13,6 +13,7 @@ FOUNDATION_EXPORT NSString * const TNCCalcuatorViewControllerStoryboardIdentifie
 
 @interface TNCCalculatorViewController : UITableViewController
 
+@property (nonatomic, readonly) UITextField *inputField;
 @property (nonatomic, readonly) UITableViewCell *totalCell;
 @property (nonatomic, readonly) UITableViewCell *averageCell;
 @property (nonatomic, readonly) UITableViewCell *countCell;

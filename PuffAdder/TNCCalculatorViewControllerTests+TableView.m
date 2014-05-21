@@ -15,4 +15,9 @@
                                       numberOfRowsInSection:0], 3);
 }
 
+- (void)testTableHeaderView {
+    XCTAssertEqualObjects(self.calculatorViewController.tableView.tableHeaderView,
+                          self.calculatorViewController.inputField);
+}
+
 @end
