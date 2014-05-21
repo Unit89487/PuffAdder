@@ -13,7 +13,7 @@
 - (void)testAverageCellIndexPath {
     XCTAssertEqualObjects(self.calculatorViewController.averageCell,
                           [self.calculatorViewController tableView:self.calculatorViewController.tableView
-                                             cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]]);
+                                             cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]);
 }
 
 - (void)testAverageCellText {

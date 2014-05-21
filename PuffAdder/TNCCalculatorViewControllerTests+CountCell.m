@@ -13,7 +13,7 @@
 - (void)testCountCellIndexPath {
     XCTAssertEqualObjects(self.calculatorViewController.countCell,
                           [self.calculatorViewController tableView:self.calculatorViewController.tableView
-                                             cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]]);
+                                             cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]]);
 }
 
 - (void)testCountCellText {

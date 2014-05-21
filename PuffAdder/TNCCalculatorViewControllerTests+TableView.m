@@ -12,12 +12,7 @@
 
 - (void)testNumberOfRows {
     XCTAssertEqual([self.calculatorViewController tableView:self.calculatorViewController.tableView
-                                      numberOfRowsInSection:0], 4);
-}
-
-- (void)testHeightForRow0 {
-    XCTAssertEqual([self.calculatorViewController tableView:self.calculatorViewController.tableView
-                                    heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]], 44 * 4);
+                                      numberOfRowsInSection:0], 3);
 }
 
 @end
