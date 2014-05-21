@@ -6,26 +6,21 @@
 //  Copyright (c) 2014 Tiny Computers. All rights reserved.
 //
 
-#import "TNCCalculatorViewController.h"
-
-@import XCTest;
-
-@interface TNCCalculatorViewControllerTests : XCTestCase
-
-@property (nonatomic) TNCCalculatorViewController *calculatorViewController;
-
-@end
+#import "TNCCalculatorViewControllerTests.h"
 
 @implementation TNCCalculatorViewControllerTests
 
 - (void)setUp {
     [super setUp];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:TNCCalcuatorViewControllerStoryboardName bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:TNCCalcuatorViewControllerStoryboardName
+                                                         bundle:nil];
     self.calculatorViewController = [storyboard instantiateViewControllerWithIdentifier:TNCCalcuatorViewControllerStoryboardIdentifier];
+    (void)self.calculatorViewController.view;
 }
 
 - (void)testSuperclass {
-    XCTAssertEqualObjects([self.calculatorViewController superclass], [UITableViewController class]);
+    XCTAssertEqualObjects([self.calculatorViewController superclass],
+                          [UITableViewController class]);
 }
 
 @end

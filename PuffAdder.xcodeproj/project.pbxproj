@@ -11,6 +11,10 @@
 		301E5926192BE598004C1866 /* TNCCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E5925192BE598004C1866 /* TNCCalculator.m */; };
 		30527E9F192CD73B0021064D /* TNCCalculatorViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30527E9E192CD73B0021064D /* TNCCalculatorViewControllerTests.m */; };
 		30527EA2192CD8CC0021064D /* TNCCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30527EA1192CD8CC0021064D /* TNCCalculatorViewController.m */; };
+		30527EA6192CF64F0021064D /* TNCCalculatorViewControllerTests+AverageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30527EA4192CF6270021064D /* TNCCalculatorViewControllerTests+AverageCell.m */; };
+		30527EA9192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30527EA8192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m */; };
+		30527EAC192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30527EAB192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m */; };
+		30527EAF192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30527EAE192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m */; };
 		3084ADE2192BE21F008DD510 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE1192BE21F008DD510 /* Foundation.framework */; };
 		3084ADE4192BE21F008DD510 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE3192BE21F008DD510 /* CoreGraphics.framework */; };
 		3084ADE6192BE21F008DD510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE5192BE21F008DD510 /* UIKit.framework */; };
@@ -41,6 +45,11 @@
 		30527E9E192CD73B0021064D /* TNCCalculatorViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCCalculatorViewControllerTests.m; path = ../TNCCalculatorViewControllerTests.m; sourceTree = "<group>"; };
 		30527EA0192CD8CC0021064D /* TNCCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCCalculatorViewController.h; sourceTree = "<group>"; };
 		30527EA1192CD8CC0021064D /* TNCCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCCalculatorViewController.m; sourceTree = "<group>"; };
+		30527EA4192CF6270021064D /* TNCCalculatorViewControllerTests+AverageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TNCCalculatorViewControllerTests+AverageCell.m"; sourceTree = "<group>"; };
+		30527EA8192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TNCCalculatorViewControllerTests+TotalCell.m"; sourceTree = "<group>"; };
+		30527EAB192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TNCCalculatorViewControllerTests+CountCell.m"; sourceTree = "<group>"; };
+		30527EAE192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TNCCalculatorViewControllerTests+TableView.m"; sourceTree = "<group>"; };
+		30527EB0192CF7570021064D /* TNCCalculatorViewControllerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCCalculatorViewControllerTests.h; sourceTree = "<group>"; };
 		3084ADDE192BE21F008DD510 /* PuffAdder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuffAdder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3084ADE1192BE21F008DD510 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3084ADE3192BE21F008DD510 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,7 +128,12 @@
 				3084ADF3192BE21F008DD510 /* Main.storyboard */,
 				30527EA0192CD8CC0021064D /* TNCCalculatorViewController.h */,
 				30527EA1192CD8CC0021064D /* TNCCalculatorViewController.m */,
+				30527EB0192CF7570021064D /* TNCCalculatorViewControllerTests.h */,
 				30527E9E192CD73B0021064D /* TNCCalculatorViewControllerTests.m */,
+				30527EAE192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m */,
+				30527EA8192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m */,
+				30527EA4192CF6270021064D /* TNCCalculatorViewControllerTests+AverageCell.m */,
+				30527EAB192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m */,
 				301E5924192BE598004C1866 /* TNCCalculator.h */,
 				301E5925192BE598004C1866 /* TNCCalculator.m */,
 				301E5922192BE44C004C1866 /* TNCCalculatorTests.m */,
@@ -249,8 +263,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30527EAC192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m in Sources */,
 				30527E9F192CD73B0021064D /* TNCCalculatorViewControllerTests.m in Sources */,
 				301E5923192BE44C004C1866 /* TNCCalculatorTests.m in Sources */,
+				30527EA6192CF64F0021064D /* TNCCalculatorViewControllerTests+AverageCell.m in Sources */,
+				30527EAF192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m in Sources */,
+				30527EA9192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
