@@ -30,4 +30,24 @@
                    [self.calculatorViewController.inputField intrinsicContentSize].height);
 }
 
+- (void)testInputFieldKeyboardType {
+    XCTAssertEqual(self.calculatorViewController.inputField.keyboardType, UIKeyboardTypeDecimalPad);
+}
+
+//- (void)testInputField
+
+
+/*
+ 
+ viewController.view
+ 
+ 
+ tableViewController.view = tableViewController.tableView
+ 
+ 
+ 
+ 
+ 
+ */
+
 @end

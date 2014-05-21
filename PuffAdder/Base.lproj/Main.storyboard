@@ -16,7 +16,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="72"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                         </textField>
                         <sections>
                             <tableViewSection id="bn9-yP-VMT">
