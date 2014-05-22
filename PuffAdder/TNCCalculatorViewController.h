@@ -17,5 +17,7 @@ FOUNDATION_EXPORT NSString * const TNCCalcuatorViewControllerStoryboardIdentifie
 @property (nonatomic, readonly) UITableViewCell *totalCell;
 @property (nonatomic, readonly) UITableViewCell *averageCell;
 @property (nonatomic, readonly) UITableViewCell *countCell;
+@property (nonatomic, readonly) UIToolbar *toolbar;
+@property (nonatomic, readonly) UIBarButtonItem *addButton;
 
 @end

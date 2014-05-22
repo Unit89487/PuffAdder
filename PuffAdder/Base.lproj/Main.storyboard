@@ -12,7 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" textAlignment="right" minimumFontSize="17" id="4fj-yG-ntX">
+                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="0" textAlignment="right" minimumFontSize="17" id="4fj-yG-ntX">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="72"/>
@@ -81,13 +81,23 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="addButton" destination="rAe-mn-Qy4" id="G5B-Mk-D3l"/>
                         <outlet property="averageCell" destination="SOu-Q8-wUx" id="p6Q-ey-6cJ"/>
                         <outlet property="countCell" destination="pRq-sq-8gc" id="WEP-Bi-CBQ"/>
                         <outlet property="inputField" destination="4fj-yG-ntX" id="XMm-Pt-WoJ"/>
+                        <outlet property="toolbar" destination="Bv6-MY-N0r" id="XnO-y3-NuZ"/>
                         <outlet property="totalCell" destination="sfZ-1R-B64" id="wc0-et-SY1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncQ-rk-HV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Bv6-MY-N0r">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Item" id="RbD-VS-Oom"/>
+                    </items>
+                </toolbar>
+                <barButtonItem title="Item" id="rAe-mn-Qy4"/>
             </objects>
             <point key="canvasLocation" x="338" y="11"/>
         </scene>

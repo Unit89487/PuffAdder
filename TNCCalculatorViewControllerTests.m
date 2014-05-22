@@ -12,10 +12,9 @@
 
 - (void)setUp {
     [super setUp];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:TNCCalcuatorViewControllerStoryboardName
-                                                         bundle:nil];
+    UIStoryboard * const storyboard = [UIStoryboard storyboardWithName:TNCCalcuatorViewControllerStoryboardName bundle:nil];
     self.calculatorViewController = [storyboard instantiateViewControllerWithIdentifier:TNCCalcuatorViewControllerStoryboardIdentifier];
-    (void)self.calculatorViewController.view;
+    [UIApplication sharedApplication].keyWindow.rootViewController = self.calculatorViewController;
 }
 
 - (void)testSuperclass {

@@ -17,9 +17,24 @@ NSString * const TNCCalcuatorViewControllerStoryboardIdentifier = @"CalculatorVi
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *totalCell;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *averageCell;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *countCell;
+@property (nonatomic, readwrite) IBOutlet UIToolbar *toolbar; 
+@property (nonatomic, readwrite) IBOutlet UIBarButtonItem *addButton;
 
 @end
 
 @implementation TNCCalculatorViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.inputField.inputAccessoryView = self.toolbar;
+    self.toolbar.items = @[self.addButton];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.inputField becomeFirstResponder];
+}
+
+
 
 @end

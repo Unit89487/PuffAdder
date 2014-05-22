@@ -37,6 +37,11 @@
                BlueprintName = "PuffAdderTests"
                ReferencedContainer = "container:PuffAdder.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "TNCCalculatorViewControllerTests/testInputFieldIsFirstResponder">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

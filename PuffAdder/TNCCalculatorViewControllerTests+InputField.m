@@ -45,6 +45,18 @@
     XCTAssertEqual(self.calculatorViewController.inputField.textAlignment, NSTextAlignmentRight);
 }
 
-// TODO: Text Field should become first responder when viewDidAppear 
+- (void)testInputFieldIsFirstResponder {
+    XCTAssert([self.calculatorViewController.inputField isFirstResponder]);
+}
+
+- (void)testInputFieldPlaceholder {
+    XCTAssertEqualObjects(self.calculatorViewController.inputField.placeholder,
+                          NSLocalizedString(@"0", nil));
+}
+
+- (void)testInputFieldInputAccessoryView {
+    XCTAssertEqualObjects(self.calculatorViewController.inputField.inputAccessoryView,
+                          self.calculatorViewController.toolbar);
+}
 
 @end
