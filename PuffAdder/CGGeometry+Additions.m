@@ -1,5 +1,5 @@
 //
-//  CGGemetry+Additions.m
+//  CGGeometry+Additions.m
 //  PuffAdder
 //
 //  Created by Jay Abdallah on 5/23/14.
