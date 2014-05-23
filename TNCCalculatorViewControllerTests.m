@@ -18,8 +18,9 @@
 }
 
 - (void)testSuperclass {
-    XCTAssertEqualObjects([self.calculatorViewController superclass],
-                          [UITableViewController class]);
+    Class superclass = [self.calculatorViewController superclass];
+    Class expectedSuperclass = [UITableViewController class];
+    XCTAssertEqualObjects(superclass, expectedSuperclass);
 }
 
 @end

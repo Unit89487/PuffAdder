@@ -10,15 +10,17 @@
 
 @implementation TNCCalculatorViewControllerTests (TotalCell)
 
-- (void)testTotalCellIndexPath {
-    XCTAssertEqualObjects(self.calculatorViewController.totalCell,
-                          [self.calculatorViewController tableView:self.calculatorViewController.tableView
-                                             cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]);
+- (void)testTotalCell {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *totalCell = self.calculatorViewController.totalCell;
+    UITableViewCell *expectedTotalCell = [self.calculatorViewController tableView:self.calculatorViewController.tableView cellForRowAtIndexPath:indexPath];
+    XCTAssertEqualObjects(totalCell, expectedTotalCell);
 }
 
 - (void)testTotalCellText {
-    XCTAssertEqualObjects(self.calculatorViewController.totalCell.textLabel.text,
-                          NSLocalizedString(@"Total", nil));
+    NSString *text = self.calculatorViewController.totalCell.textLabel.text;
+    NSString *expectedText = NSLocalizedString(@"Total", nil);
+    XCTAssertEqualObjects(text, expectedText);
 }
 
 @end

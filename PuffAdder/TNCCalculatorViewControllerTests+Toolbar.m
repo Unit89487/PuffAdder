@@ -11,13 +11,15 @@
 @implementation TNCCalculatorViewControllerTests (Toolbar)
 
 - (void)testToolbarClass {
-    XCTAssertEqualObjects([self.calculatorViewController.toolbar class],
-                          [UIToolbar class]);
+    Class class = [self.calculatorViewController.toolbar class];
+    Class expectedClass = [UIToolbar class];
+    XCTAssertEqualObjects(class, expectedClass);
 }
 
 - (void)testToolbarItems {
-    XCTAssertEqualObjects(self.calculatorViewController.toolbar.items,
-                          @[self.calculatorViewController.addButton]);
+    NSArray *items = self.calculatorViewController.toolbar.items;
+    NSArray *expectedItems = @[self.calculatorViewController.addButton];
+    XCTAssertEqualObjects(items, expectedItems);
 }
 
 @end

@@ -11,38 +11,47 @@
 @implementation TNCCalculatorViewControllerTests (InputField)
 
 - (void)testInputFieldClass {
-    XCTAssertEqualObjects([self.calculatorViewController.inputField class],
-                          [UITextField class]);
+    Class class = [self.calculatorViewController.inputField class];
+    Class expectedClass = [UITextField class];
+    XCTAssertEqualObjects(class, expectedClass);
 }
 
 - (void)testInputFieldBorderStyle {
-    XCTAssertEqual(self.calculatorViewController.inputField.borderStyle,
-                   UITextBorderStyleNone);
+    UITextBorderStyle borderStyle = self.calculatorViewController.inputField.borderStyle;
+    UITextBorderStyle expectedBorderStyle = UITextBorderStyleNone;
+    XCTAssertEqual(borderStyle, expectedBorderStyle);
 }
 
 - (void)testInputFieldFont {
-    XCTAssertEqualObjects(self.calculatorViewController.inputField.font,
-                          [UIFont fontWithName:@"HelveticaNeue-Thin" size:72]);
+    UIFont *font = self.calculatorViewController.inputField.font;
+    UIFont *expectedFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:48];
+    XCTAssertEqualObjects(font, expectedFont);
 }
 
 - (void)testInputFieldHeight {
+    CGFloat height = CGRectGetHeight(self.calculatorViewController.inputField.frame);
     CGFloat expectedHeight = 0;
     expectedHeight += [self.calculatorViewController.inputField intrinsicContentSize].height;
     expectedHeight += CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
-    XCTAssertEqual(CGRectGetHeight(self.calculatorViewController.inputField.frame), expectedHeight);
+    XCTAssertEqual(height, expectedHeight);
 }
 
 - (void)testInputFieldKeyboardType {
-    XCTAssertEqual(self.calculatorViewController.inputField.keyboardType, UIKeyboardTypeDecimalPad);
+    UIKeyboardType keyboardType = self.calculatorViewController.inputField.keyboardType;
+    UIKeyboardType expectedKeyboardType = UIKeyboardTypeDecimalPad;
+    XCTAssertEqual(keyboardType, expectedKeyboardType);
 }
 
 - (void)testInputFieldContentVerticalAlignment {
-    XCTAssertEqual(self.calculatorViewController.inputField.contentVerticalAlignment,
-                   UIControlContentVerticalAlignmentBottom);
+    UIControlContentVerticalAlignment contentVerticalAlignment = self.calculatorViewController.inputField.contentVerticalAlignment;
+    UIControlContentVerticalAlignment expectedContentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
+    XCTAssertEqual(contentVerticalAlignment, expectedContentVerticalAlignment);
 }
 
 - (void)testInputFieldTextAlingment {
-    XCTAssertEqual(self.calculatorViewController.inputField.textAlignment, NSTextAlignmentRight);
+    NSTextAlignment textAlignment = self.calculatorViewController.inputField.textAlignment;
+    NSTextAlignment expectedTextAlignment = NSTextAlignmentRight;
+    XCTAssertEqual(textAlignment, expectedTextAlignment);
 }
 
 - (void)testInputFieldIsFirstResponder {
@@ -50,13 +59,15 @@
 }
 
 - (void)testInputFieldPlaceholder {
-    XCTAssertEqualObjects(self.calculatorViewController.inputField.placeholder,
-                          NSLocalizedString(@"0", nil));
+    NSString *placeholder = self.calculatorViewController.inputField.placeholder;
+    NSString *expectedPlaceholder = NSLocalizedString(@"0", nil);
+    XCTAssertEqualObjects(placeholder, expectedPlaceholder);
 }
 
 - (void)testInputFieldInputAccessoryView {
-    XCTAssertEqualObjects(self.calculatorViewController.inputField.inputAccessoryView,
-                          self.calculatorViewController.toolbar);
+    UIView *inputAccessoryView = self.calculatorViewController.inputField.inputAccessoryView;
+    UIToolbar *expectedAccessoryView = self.calculatorViewController.toolbar;
+    XCTAssertEqualObjects(inputAccessoryView, expectedAccessoryView);
 }
 
 @end

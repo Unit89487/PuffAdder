@@ -11,13 +11,15 @@
 @implementation TNCCalculatorViewControllerTests (TableView)
 
 - (void)testNumberOfRows {
-    XCTAssertEqual([self.calculatorViewController tableView:self.calculatorViewController.tableView
-                                      numberOfRowsInSection:0], 3);
+    NSInteger numberOfRows = [self.calculatorViewController tableView:self.calculatorViewController.tableView numberOfRowsInSection:0];
+    NSInteger expectedNumberOfRows = 3;
+    XCTAssertEqual(numberOfRows, expectedNumberOfRows);
 }
 
 - (void)testTableHeaderView {
-    XCTAssertEqualObjects(self.calculatorViewController.tableView.tableHeaderView,
-                          self.calculatorViewController.inputField);
+    UIView *headerView = self.calculatorViewController.tableView.tableHeaderView;
+    UIView *expectedHeaderView = self.calculatorViewController.inputField;
+    XCTAssertEqualObjects(headerView, expectedHeaderView);
 }
 
 @end

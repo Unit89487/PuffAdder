@@ -28,6 +28,10 @@
 		3084AE03192BE21F008DD510 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3084ADE5192BE21F008DD510 /* UIKit.framework */; };
 		30C68557192E506500CBC97C /* TNCCalculatorViewControllerTests+Toolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C68555192E505200CBC97C /* TNCCalculatorViewControllerTests+Toolbar.m */; };
 		30C6855A192E53DE00CBC97C /* TNCCalculatorViewControllerTests+AddButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C68559192E53DE00CBC97C /* TNCCalculatorViewControllerTests+AddButton.m */; };
+		30C68562192E61D800CBC97C /* TNCPaddedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6855D192E61D800CBC97C /* TNCPaddedTextField.m */; };
+		30C68566192E61DF00CBC97C /* TNCPaddedTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6855F192E61D800CBC97C /* TNCPaddedTextFieldTests.m */; };
+		30C6856E192FC88100CBC97C /* CGGeometry+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6856D192FC88100CBC97C /* CGGeometry+Additions.m */; };
+		30C68570192FCAB200CBC97C /* CGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C6856F192FCAB200CBC97C /* CGGeometryTests.m */; };
 		30DC935E192D10AF0003BEC5 /* TNCCalculatorViewControllerTests+InputField.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DC935D192D10AF0003BEC5 /* TNCCalculatorViewControllerTests+InputField.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,12 @@
 		30C68555192E505200CBC97C /* TNCCalculatorViewControllerTests+Toolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TNCCalculatorViewControllerTests+Toolbar.m"; sourceTree = "<group>"; };
 		30C68559192E53DE00CBC97C /* TNCCalculatorViewControllerTests+AddButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TNCCalculatorViewControllerTests+AddButton.m"; sourceTree = "<group>"; };
 		30C6855B192E546F00CBC97C /* TNCCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCCalculatorViewController.h; sourceTree = "<group>"; };
+		30C6855C192E61D800CBC97C /* TNCPaddedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNCPaddedTextField.h; sourceTree = "<group>"; };
+		30C6855D192E61D800CBC97C /* TNCPaddedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCPaddedTextField.m; sourceTree = "<group>"; };
+		30C6855F192E61D800CBC97C /* TNCPaddedTextFieldTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNCPaddedTextFieldTests.m; sourceTree = "<group>"; };
+		30C6856C192FC86B00CBC97C /* CGGeometry+Addtions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+Addtions.h"; sourceTree = "<group>"; };
+		30C6856D192FC88100CBC97C /* CGGeometry+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+Additions.m"; sourceTree = "<group>"; };
+		30C6856F192FCAB200CBC97C /* CGGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGGeometryTests.m; sourceTree = "<group>"; };
 		30DC935D192D10AF0003BEC5 /* TNCCalculatorViewControllerTests+InputField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TNCCalculatorViewControllerTests+InputField.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +169,12 @@
 				30527EAB192CF6720021064D /* TNCCalculatorViewControllerTests+CountCell.m */,
 				30C68555192E505200CBC97C /* TNCCalculatorViewControllerTests+Toolbar.m */,
 				30C68559192E53DE00CBC97C /* TNCCalculatorViewControllerTests+AddButton.m */,
+				30C6855C192E61D800CBC97C /* TNCPaddedTextField.h */,
+				30C6855D192E61D800CBC97C /* TNCPaddedTextField.m */,
+				30C6855F192E61D800CBC97C /* TNCPaddedTextFieldTests.m */,
+				30C6856C192FC86B00CBC97C /* CGGeometry+Addtions.h */,
+				30C6856D192FC88100CBC97C /* CGGeometry+Additions.m */,
+				30C6856F192FCAB200CBC97C /* CGGeometryTests.m */,
 			);
 			name = "Calculator View Controller";
 			path = PuffAdder;
@@ -272,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C68562192E61D800CBC97C /* TNCPaddedTextField.m in Sources */,
+				30C6856E192FC88100CBC97C /* CGGeometry+Additions.m in Sources */,
 				301E5926192BE598004C1866 /* TNCCalculator.m in Sources */,
 				3084ADF2192BE21F008DD510 /* TNCAppDelegate.m in Sources */,
 				30527EA2192CD8CC0021064D /* TNCCalculatorViewController.m in Sources */,
@@ -290,8 +308,10 @@
 				30C68557192E506500CBC97C /* TNCCalculatorViewControllerTests+Toolbar.m in Sources */,
 				30527EA6192CF64F0021064D /* TNCCalculatorViewControllerTests+AverageCell.m in Sources */,
 				30527EAF192CF6950021064D /* TNCCalculatorViewControllerTests+TableView.m in Sources */,
+				30C68570192FCAB200CBC97C /* CGGeometryTests.m in Sources */,
 				30C6855A192E53DE00CBC97C /* TNCCalculatorViewControllerTests+AddButton.m in Sources */,
 				30527EA9192CF6610021064D /* TNCCalculatorViewControllerTests+TotalCell.m in Sources */,
+				30C68566192E61DF00CBC97C /* TNCPaddedTextFieldTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

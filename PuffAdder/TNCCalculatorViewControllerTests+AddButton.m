@@ -11,7 +11,9 @@
 @implementation TNCCalculatorViewControllerTests (AddButton)
 
 - (void)testAddButtonClass {
-    XCTAssertEqualObjects([self.calculatorViewController.addButton class], [UIBarButtonItem class]);
+    Class class = [self.calculatorViewController.addButton class];
+    Class expectedClass = [UIBarButtonItem class];
+    XCTAssertEqualObjects(class, expectedClass);
 }
 
 @end

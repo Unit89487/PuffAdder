@@ -10,15 +10,17 @@
 
 @implementation TNCCalculatorViewControllerTests (AverageCell)
 
-- (void)testAverageCellIndexPath {
-    XCTAssertEqualObjects(self.calculatorViewController.averageCell,
-                          [self.calculatorViewController tableView:self.calculatorViewController.tableView
-                                             cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]]);
+- (void)testAverageCell {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+    UITableViewCell *cell = self.calculatorViewController.averageCell;
+    UITableViewCell *expectedCell = [self.calculatorViewController tableView:self.calculatorViewController.tableView cellForRowAtIndexPath:indexPath];
+    XCTAssertEqualObjects(cell, expectedCell);
 }
 
 - (void)testAverageCellText {
-    XCTAssertEqualObjects(self.calculatorViewController.averageCell.textLabel.text,
-                          NSLocalizedString(@"Average", nil));
+    NSString *text = self.calculatorViewController.averageCell.textLabel.text;
+    NSString *expectedText = NSLocalizedString(@"Average", nil);
+    XCTAssertEqualObjects(text, expectedText);
 }
 
 @end
