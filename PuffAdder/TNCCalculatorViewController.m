@@ -7,13 +7,14 @@
 //
 
 #import "TNCCalculatorViewController.h"
+#import "TNCPaddedTextField.h"
 
 NSString * const TNCCalcuatorViewControllerStoryboardName = @"Main";
 NSString * const TNCCalcuatorViewControllerStoryboardIdentifier = @"CalculatorViewController";
 
 @interface TNCCalculatorViewController ()
 
-@property (nonatomic, readwrite) IBOutlet UITextField *inputField;
+@property (nonatomic, readwrite) IBOutlet TNCPaddedTextField *inputField;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *totalCell;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *averageCell;
 @property (nonatomic, readwrite) IBOutlet UITableViewCell *countCell;
@@ -30,11 +31,16 @@ NSString * const TNCCalcuatorViewControllerStoryboardIdentifier = @"CalculatorVi
     self.toolbar.items = @[self.addButton];
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    CGFloat topPadding = CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
+    CGFloat horizontalPadding = CGRectGetMinX(self.totalCell.textLabel.frame);
+    self.inputField.contentInsets = UIEdgeInsetsMake(topPadding, horizontalPadding, 0, horizontalPadding);
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.inputField becomeFirstResponder];
 }
-
-
 
 @end

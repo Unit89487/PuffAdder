@@ -7,12 +7,13 @@
 //
 
 #import "TNCCalculatorViewControllerTests+InputField.h"
+#import "TNCPaddedTextField.h"
 
 @implementation TNCCalculatorViewControllerTests (InputField)
 
 - (void)testInputFieldClass {
     Class class = [self.calculatorViewController.inputField class];
-    Class expectedClass = [UITextField class];
+    Class expectedClass = [TNCPaddedTextField class];
     XCTAssertEqualObjects(class, expectedClass);
 }
 
@@ -30,9 +31,7 @@
 
 - (void)testInputFieldHeight {
     CGFloat height = CGRectGetHeight(self.calculatorViewController.inputField.frame);
-    CGFloat expectedHeight = 0;
-    expectedHeight += [self.calculatorViewController.inputField intrinsicContentSize].height;
-    expectedHeight += CGRectGetHeight([UIApplication sharedApplication].statusBarFrame);
+    CGFloat expectedHeight = [self.calculatorViewController.inputField intrinsicContentSize].height;
     XCTAssertEqual(height, expectedHeight);
 }
 
@@ -68,6 +67,12 @@
     UIView *inputAccessoryView = self.calculatorViewController.inputField.inputAccessoryView;
     UIToolbar *expectedAccessoryView = self.calculatorViewController.toolbar;
     XCTAssertEqualObjects(inputAccessoryView, expectedAccessoryView);
+}
+
+- (void)testInputFieldContentInsets {
+    UIEdgeInsets contentInsets = self.calculatorViewController.inputField.contentInsets;
+    UIEdgeInsets expectedContentInsets = UIEdgeInsetsMake(20, 15, 0, 15);
+    XCTAssert(UIEdgeInsetsEqualToEdgeInsets(contentInsets, expectedContentInsets));
 }
 
 @end

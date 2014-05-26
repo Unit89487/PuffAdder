@@ -11,9 +11,11 @@ FOUNDATION_EXPORT NSString * const TNCCalcuatorViewControllerStoryboardIdentifie
 
 @import UIKit;
 
+@class TNCPaddedTextField;
+
 @interface TNCCalculatorViewController : UITableViewController
 
-@property (nonatomic, readonly) UITextField *inputField;
+@property (nonatomic, readonly) TNCPaddedTextField *inputField;
 @property (nonatomic, readonly) UITableViewCell *totalCell;
 @property (nonatomic, readonly) UITableViewCell *averageCell;
 @property (nonatomic, readonly) UITableViewCell *countCell;
