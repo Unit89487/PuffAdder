@@ -41,12 +41,6 @@
     XCTAssertEqual(keyboardType, expectedKeyboardType);
 }
 
-- (void)testInputFieldContentVerticalAlignment {
-    UIControlContentVerticalAlignment contentVerticalAlignment = self.calculatorViewController.inputField.contentVerticalAlignment;
-    UIControlContentVerticalAlignment expectedContentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
-    XCTAssertEqual(contentVerticalAlignment, expectedContentVerticalAlignment);
-}
-
 - (void)testInputFieldTextAlingment {
     NSTextAlignment textAlignment = self.calculatorViewController.inputField.textAlignment;
     NSTextAlignment expectedTextAlignment = NSTextAlignmentRight;
@@ -57,10 +51,13 @@
     XCTAssert([self.calculatorViewController.inputField isFirstResponder]);
 }
 
-- (void)testInputFieldPlaceholder {
-    NSString *placeholder = self.calculatorViewController.inputField.placeholder;
-    NSString *expectedPlaceholder = NSLocalizedString(@"0", nil);
-    XCTAssertEqualObjects(placeholder, expectedPlaceholder);
+- (void)testInputFieldAttributedPlaceholder {
+    UIFont *expectedFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:48];
+    UIColor *expectedColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+    NSDictionary *expectedAttributes = @{NSFontAttributeName: expectedFont, NSForegroundColorAttributeName: expectedColor};
+    NSAttributedString *attributedPlaceholder = self.calculatorViewController.inputField.attributedPlaceholder;
+    NSAttributedString *expectedAttributedPlaceholder = [[NSAttributedString alloc] initWithString:@"0" attributes:expectedAttributes];
+    XCTAssertEqualObjects(attributedPlaceholder, expectedAttributedPlaceholder);
 }
 
 - (void)testInputFieldInputAccessoryView {
@@ -73,6 +70,18 @@
     UIEdgeInsets contentInsets = self.calculatorViewController.inputField.contentInsets;
     UIEdgeInsets expectedContentInsets = UIEdgeInsetsMake(20, 15, 0, 15);
     XCTAssert(UIEdgeInsetsEqualToEdgeInsets(contentInsets, expectedContentInsets));
+}
+
+- (void)testInputFieldTextColor {
+    UIColor *textColor = self.calculatorViewController.inputField.textColor;
+    UIColor *expectedTextColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+    XCTAssertEqualObjects(textColor, expectedTextColor);
+}
+
+- (void)testInputFieldBackgroundColor {
+    UIColor *backgroundColor = self.calculatorViewController.inputField.backgroundColor;
+    UIColor *expectedBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+    XCTAssertEqualObjects(backgroundColor, expectedBackgroundColor);
 }
 
 @end

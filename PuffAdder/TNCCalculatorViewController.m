@@ -12,23 +12,13 @@
 NSString * const TNCCalcuatorViewControllerStoryboardName = @"Main";
 NSString * const TNCCalcuatorViewControllerStoryboardIdentifier = @"CalculatorViewController";
 
-@interface TNCCalculatorViewController ()
-
-@property (nonatomic, readwrite) IBOutlet TNCPaddedTextField *inputField;
-@property (nonatomic, readwrite) IBOutlet UITableViewCell *totalCell;
-@property (nonatomic, readwrite) IBOutlet UITableViewCell *averageCell;
-@property (nonatomic, readwrite) IBOutlet UITableViewCell *countCell;
-@property (nonatomic, readwrite) IBOutlet UIToolbar *toolbar; 
-@property (nonatomic, readwrite) IBOutlet UIBarButtonItem *addButton;
-
-@end
-
 @implementation TNCCalculatorViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.inputField.inputAccessoryView = self.toolbar;
     self.toolbar.items = @[self.addButton];
+    self.inputField.attributedPlaceholder = [self preferredAttributedPlaceholder];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -41,6 +31,12 @@ NSString * const TNCCalcuatorViewControllerStoryboardIdentifier = @"CalculatorVi
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.inputField becomeFirstResponder];
+}
+
+- (NSAttributedString *)preferredAttributedPlaceholder {
+    NSString *string = self.inputField.placeholder;
+    NSDictionary *attributes = @{NSForegroundColorAttributeName: self.inputField.textColor};
+    return [[NSAttributedString alloc] initWithString:string attributes:attributes];
 }
 
 @end

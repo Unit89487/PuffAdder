@@ -12,9 +12,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="0" textAlignment="right" minimumFontSize="17" id="4fj-yG-ntX" customClass="TNCPaddedTextField">
+                        <textField key="tableHeaderView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="right" minimumFontSize="17" id="4fj-yG-ntX" customClass="TNCPaddedTextField">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="48"/>
                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                         </textField>
@@ -80,6 +82,7 @@
                             <outlet property="delegate" destination="C8L-0b-hWB" id="8ig-f0-81U"/>
                         </connections>
                     </tableView>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="rAe-mn-Qy4" id="G5B-Mk-D3l"/>
                         <outlet property="averageCell" destination="SOu-Q8-wUx" id="p6Q-ey-6cJ"/>
