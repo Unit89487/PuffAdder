@@ -23,4 +23,10 @@
     XCTAssertEqualObjects(superclass, expectedSuperclass);
 }
 
+- (void)testStatusBarStyle {
+    UIStatusBarStyle statusBarStyle = [self.calculatorViewController preferredStatusBarStyle];
+    UIStatusBarStyle expectedStatusBarStyle = UIStatusBarStyleLightContent;
+    XCTAssertEqual(statusBarStyle, expectedStatusBarStyle);
+}
+
 @end

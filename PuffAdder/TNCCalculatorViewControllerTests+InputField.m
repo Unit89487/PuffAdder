@@ -8,6 +8,7 @@
 
 #import "TNCCalculatorViewControllerTests+InputField.h"
 #import "TNCPaddedTextField.h"
+#import "TNCCalculator.h"
 
 @implementation TNCCalculatorViewControllerTests (InputField)
 
@@ -82,6 +83,35 @@
     UIColor *backgroundColor = self.calculatorViewController.inputField.backgroundColor;
     UIColor *expectedBackgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
     XCTAssertEqualObjects(backgroundColor, expectedBackgroundColor);
+}
+
+- (void)testInputFieldDelegate {
+    id<UITextFieldDelegate> delegate = self.calculatorViewController.inputField.delegate;
+    id<UITextFieldDelegate> expectedDelegate = self.calculatorViewController;
+    XCTAssertEqualObjects(delegate, expectedDelegate);
+}
+
+- (void)testInputFieldInitialZero {
+    BOOL shouldChange = [self.calculatorViewController textField:self.calculatorViewController.inputField shouldChangeCharactersInRange:NSMakeRange(0, 0) replacementString:@"0"];
+    XCTAssertFalse(shouldChange);
+}
+
+- (void)testInputFieldInitialOne {
+    BOOL shouldChange = [self.calculatorViewController textField:self.calculatorViewController.inputField shouldChangeCharactersInRange:NSMakeRange(0, 0) replacementString:@"1"];
+    XCTAssert(shouldChange);
+}
+
+- (void)testInputFieldRegularZero {
+    self.calculatorViewController.inputField.text = @"1";
+    BOOL shouldChange = [self.calculatorViewController textField:self.calculatorViewController.inputField shouldChangeCharactersInRange:NSMakeRange(0, 0) replacementString:@"0"];
+    XCTAssert(shouldChange);
+}
+
+- (void)testInputFieldEmptyNumber {
+    [self.calculatorViewController addButtonPressed];
+    double total = self.calculatorViewController.calculator.total;
+    double expectedTotal = 0;
+    XCTAssertEqual(total, expectedTotal);
 }
 
 @end

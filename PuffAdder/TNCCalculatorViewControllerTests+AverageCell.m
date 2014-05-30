@@ -7,6 +7,8 @@
 //
 
 #import "TNCCalculatorViewControllerTests.h"
+#import "TNCPaddedTextField.h"
+#import "TNCCalculator.h"
 
 @implementation TNCCalculatorViewControllerTests (AverageCell)
 
@@ -21,6 +23,29 @@
     NSString *text = self.calculatorViewController.averageCell.textLabel.text;
     NSString *expectedText = NSLocalizedString(@"Average", nil);
     XCTAssertEqualObjects(text, expectedText);
+}
+
+- (void)testAverageCellDetailText {
+    NSString *detailText = self.calculatorViewController.averageCell.detailTextLabel.text;
+    NSString *expectedDetailText = @"0";
+    XCTAssertEqualObjects(detailText, expectedDetailText);
+}
+
+- (void)testAverageCellDetailTextUpdate {
+    [self.calculatorViewController.calculator updateWithNumber:1];
+    self.calculatorViewController.inputField.text = @"2";
+    [self.calculatorViewController addButtonPressed];
+    NSString *detailText = self.calculatorViewController.averageCell.detailTextLabel.text;
+    NSString *expectedDetailText = @"1.5";
+    XCTAssertEqualObjects(detailText, expectedDetailText);
+}
+
+- (void)testAverageCellDetailTextReset {
+    self.calculatorViewController.averageCell.detailTextLabel.text = @"1";
+    [self.calculatorViewController resetButtonPressed];
+    NSString *detailText = self.calculatorViewController.averageCell.detailTextLabel.text;
+    NSString *expectedDetailText = @"0";
+    XCTAssertEqualObjects(detailText, expectedDetailText);
 }
 
 @end

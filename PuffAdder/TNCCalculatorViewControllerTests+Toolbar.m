@@ -17,9 +17,16 @@
 }
 
 - (void)testToolbarItems {
-    NSArray *items = self.calculatorViewController.toolbar.items;
-    NSArray *expectedItems = @[self.calculatorViewController.addButton];
-    XCTAssertEqualObjects(items, expectedItems);
+    {
+        UIBarButtonItem *leftItem = [self.calculatorViewController.toolbar.items firstObject];
+        UIBarButtonItem *expectedLeftItem = self.calculatorViewController.resetButton;
+        XCTAssertEqualObjects(leftItem, expectedLeftItem);
+    }
+    {
+        UIBarButtonItem *rightItem = [self.calculatorViewController.toolbar.items lastObject];
+        UIBarButtonItem *expectedRightItem = self.calculatorViewController.addButton;
+        XCTAssertEqualObjects(rightItem, expectedRightItem);
+    }
 }
 
 @end

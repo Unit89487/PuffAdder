@@ -7,6 +7,8 @@
 //
 
 #import "TNCCalculatorViewControllerTests.h"
+#import "TNCCalculator.h"
+#import "TNCPaddedTextField.h"
 
 @implementation TNCCalculatorViewControllerTests (CountCell)
 
@@ -21,6 +23,29 @@
     NSString *text = self.calculatorViewController.countCell.textLabel.text;
     NSString *expectedCell = NSLocalizedString(@"Count", nil);
     XCTAssertEqualObjects(text, expectedCell);
+}
+
+- (void)testCountCellDetailText {
+    NSString *detailText = self.calculatorViewController.countCell.detailTextLabel.text;
+    NSString *expectedDetailText = @"0";
+    XCTAssertEqualObjects(detailText, expectedDetailText);
+}
+
+- (void)testCountCellDetailTextUpdate {
+    [self.calculatorViewController.calculator updateWithNumber:1];
+    self.calculatorViewController.inputField.text = @"2";
+    [self.calculatorViewController addButtonPressed];
+    NSString *detailText = self.calculatorViewController.countCell.detailTextLabel.text;
+    NSString *expectedDetailText = @"2";
+    XCTAssertEqualObjects(detailText, expectedDetailText);
+}
+
+- (void)testCountCellDetailTextReset {
+    self.calculatorViewController.countCell.detailTextLabel.text = @"1";
+    [self.calculatorViewController resetButtonPressed];
+    NSString *detailText = self.calculatorViewController.countCell.detailTextLabel.text;
+    NSString *expectedDetailText = @"0";
+    XCTAssertEqualObjects(detailText, expectedDetailText);
 }
 
 @end

@@ -23,4 +23,12 @@
     XCTAssertEqualObjects(headerView, expectedHeaderView);
 }
 
+- (void)testTableViewSelectionAllowsSelection {
+    XCTAssertFalse(self.calculatorViewController.tableView.allowsSelection);
+}
+
+- (void)testTableViewScrollEnabled {
+    XCTAssertFalse(self.calculatorViewController.tableView.scrollEnabled);
+}
+
 @end
